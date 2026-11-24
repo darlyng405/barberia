@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico -->
+    <title>Nexo Studio | Barbería de Autor — Plan Profesional</title>
+    <meta
+      name="description"
+      content="Nexo Studio: cortes clásicos, degradados de precisión y ritual de barba con atención personalizada de un maestro barbero. Solicita tu cita directamente por WhatsApp."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_DO" />
+    <meta property="og:site_name" content="Nexo Studio" />
+    <meta property="og:title" content="Nexo Studio | Barbería de Autor" />
+    <meta
+      property="og:description"
+      content="Técnica, tradición y estilo contemporáneo. Conoce nuestros servicios, explora la galería de estilos y coordina tu cita por WhatsApp."
+    />
+    <meta
+      property="og:image"
+      content="/src/assets/images/hero_barbershop_studio_1795552060130.jpg"
+    />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nexo Studio | Barbería de Autor" />
+    <meta
+      name="twitter:description"
+      content="Cortes clásicos, degradados de precisión y cuidado de barba en un estudio privado. Coordina tu visita por WhatsApp."
+    />
+    <meta
+      name="twitter:image"
+      content="/src/assets/images/hero_barbershop_studio_1795552060130.jpg"
+    />
+
+    <!-- Tipografías editoriales: Playfair Display + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      Datos Estructurados Schema.org (JSON-LD) para negocio local.
+      IMPORTANTE: Al publicar el sitio real, agrega los campos reales de
+      "url", "telephone", "address" y "openingHoursSpecification" del negocio.
+      Se omiten datos de contacto demostrativos para evitar indexar información no definitiva.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Nexo Studio",
+        "description": "Barbería de autor especializada en cortes clásicos, degradados de precisión, arreglo de barba y afeitado tradicional con atención individual de un maestro barbero.",
+        "image": "/src/assets/images/hero_barbershop_studio_1795552060130.jpg",
+        "serviceType": [
+          "Corte clásico",
+          "Degradado y diseño",
+          "Corte y barba",
+          "Arreglo de barba",
+          "Afeitado clásico",
+          "Diseño de cejas"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-cream text-charcoal antialiased selection:bg-copper/20 selection:text-charcoal">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

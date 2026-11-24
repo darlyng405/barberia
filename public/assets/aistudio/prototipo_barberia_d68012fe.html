@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO BÁSICO -->
+    <title>Nexo Studio | Barbería Premium en Santo Domingo</title>
+    <meta name="description" content="Disfruta de una experiencia de barbería de alta gama en Santo Domingo. Cortes clásicos, degradados de precisión y arreglo de barba con un maestro barbero.">
+    <meta name="keywords" content="barberia, barberia santo domingo, corte de pelo hombre, degradado, afeitado clasico">
+    
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Nexo Studio | Barbería Premium">
+    <meta property="og:description" content="Técnica, tradición y estilo contemporáneo. Un ritual creado para tu mejor versión.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074&auto=format&fit=crop">
+    <meta property="og:url" content="https://www.nexostudio.do">
+    <meta property="og:type" content="website">
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- DATOS ESTRUCTURADOS JSON-LD (SEO LOCAL) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Nexo Studio",
+      "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074&auto=format&fit=crop",
+      "description": "Barbería premium especializada en cortes clásicos y modernos, degradados y cuidado de barba.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Winston Churchill 95",
+        "addressLocality": "Santo Domingo",
+        "addressCountry": "DO"
+      },
+      "telephone": "+1-809-555-0000",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ================= VARIABLES Y RESET ================= */
+        :root {
+            --bg-cream: #F5F2EB;
+            --bg-dark: #1A1A1A;
+            --bg-card: #FFFFFF;
+            --text-main: #1A1A1A;
+            --text-light: #F5F2EB;
+            --text-muted: #6B6B6B;
+            --gold: #A67C52;
+            --gold-hover: #8C6842;
+            --border-color: #E2DDD3;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-cream);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: var(--font-sans);
+            border: none;
+            background: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Animaciones de scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= NAVBAR ================= */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(245, 242, 235, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            z-index: 101;
+        }
+
+        .logo-circle {
+            width: 36px;
+            height: 36px;
+            background-color: var(--text-main);
+            color: var(--bg-cream);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            z-index: 101;
+        }
+
+        .btn-whatsapp-nav {
+            background-color: var(--gold);
+            color: var(--text-light);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-whatsapp-nav:hover {
+            background-color: var(--gold-hover);
+        }
+
+        /* Menú Móvil */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            z-index: 101;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-subtitle {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: #ddd;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--text-light);
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary-hero {
+            border: 1px solid var(--text-light);
+            color: var(--text-light);
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .btn-secondary-hero:hover {
+            background-color: var(--text-light);
+            color: var(--text-main);
+        }
+
+        /* ================= SERVICIOS ================= */
+        .services {
+            padding: 120px 0;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+            max-width: 600px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: var(--transition);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+
+        .service-img-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .service-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            margin-top: auto;
+        }
+
+        .service-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 0.85rem;
+        }
+
+        .service-price {
+            font-weight: 600;
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        .btn-service-wa {
+            background: var(--bg-cream);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-service-wa:hover {
+            background: var(--gold);
+            color: white;
+            border-color: var(--gold);
+        }
+
+        /* ================= GALERÍA ================= */
+        .gallery {
+            padding: 120px 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .gallery .section-header h2 {
+            color: var(--text-light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            grid-auto-rows: 250px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Hacer la galería asimétrica (Editorial) */
+        .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+        .gallery-item:nth-child(4) { grid-column: span 2; }
+        .gallery-item:nth-child(6) { grid-row: span 2; }
+
+        /* ================= NOSOTROS ================= */
+        .about {
+            padding: 120px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            list-style: none;
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .about-features li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* ================= TESTIMONIOS ================= */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--bg-cream);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .grid-testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .stars {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .client-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .client-since {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ================= CONTACTO ================= */
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .contact-info {
+            padding: 100px 80px;
+        }
+
+        .contact-info h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .contact-list span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-list a {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .contact-list a:hover {
+            color: var(--gold);
+        }
+
+        .map-container {
+            background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 400px;
+        }
+
+        .map-pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: var(--text-main);
+            padding: 15px 25px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        
+        .map-pin:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--text-muted);
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 4rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .about-img { height: 400px; }
+            .contact-info { padding: 60px 40px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+            .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+            .gallery-item:nth-child(4) { grid-column: span 1; }
+            .gallery-item:nth-child(6) { grid-row: span 1; }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--bg-cream);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: var(--transition);
+                z-index: 100;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.5rem; }
+            .mobile-menu-btn { display: block; }
+            
+            .hero h1 { font-size: 3rem; }
+            .hero-buttons { flex-direction: column; width: 100%; }
+            .btn-primary, .btn-secondary-hero { justify-content: center; }
+            
+            .services { padding: 80px 0; }
+            .grid-services { grid-template-columns: 1fr; }
+            
+            .gallery { padding: 80px 0; }
+            .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
+            .gallery-item:nth-child(1) { grid-column: span 1; }
+            
+            .about { padding: 80px 0; }
+            .contact-section { grid-template-columns: 1fr; }
+            .contact-info { padding: 60px 20px; }
+            .contact-info h2 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-circle">N</div>
+                NEXO <span style="font-weight: 300; font-size: 0.8rem;">STUDIO</span>
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+                <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+                <a href="#galeria" onclick="toggleMenu()">Galería</a>
+                <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
+                <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Botón de WhatsApp en Navbar -->
+                <a href="#" class="btn-whatsapp-nav" onclick="openWhatsApp('Hola, me gustaría obtener más información y agendar una cita en Nexo Studio.')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    Reservar
+                </a>
+                <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-subtitle">NEXO BARBERÍA</span>
+                <h1>Precisión.<br>Actitud.<br><span>Carácter.</span></h1>
+                <p>Técnica, tradición y estilo contemporáneo. Un ritual creado para tu mejor versión en manos de un experto.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary" onclick="openWhatsApp('Hola, me gustaría solicitar una cita en Nexo Studio.')">
+                        Solicitar cita por WhatsApp
+                    </a>
+                    <a href="#servicios" class="btn-secondary-hero">Explorar Servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="services container">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">El Ritual Nexo</span>
+            <h2>Servicios & Precios</h2>
+            <p>Elige tu experiencia. Todos nuestros servicios incluyen una consulta personalizada para asegurar el mejor resultado.</p>
+        </div>
+        
+        <div class="grid-services">
+            <!-- Servicio 1 -->
+            <div class="service-card fade-in">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800&auto=format&fit=crop" alt="Corte Clásico" class="service-img">
+                </div>
+                <div class="service-content">
+                    <span class="service-tag">Corte</span>
+                    <h3>Corte Signature</h3>
+                    <p class="service-desc">Un corte clásico adaptado a la forma de tu rostro y estilo de vida, terminado con un lavado y peinado.</p>
+                    <div class="service-footer">
+                        <div class="service-meta">
+                            <span>45 min</span>
+                            <span class="service-price">RD$ 1,500</span>
+                        </div>
+                        <a href="#" class="btn-service-wa" onclick="openWhatsApp('Hola, me gustaría solicitar una cita para el servicio de Corte Signature.')">Reservar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Servicio 2 -->
+            <div class="service-card fade-in">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=800&auto=format&fit=crop" alt="Degradado" class="service-img">
+                </div>
+                <div class="service-content">
+                    <span class="service-tag">Corte</span>
+                    <h3>Degradado & Diseño</h3>
+                    <p class="service-desc">Degradados de alta precisión (fade) con diseño de líneas y perfiles. Incluye lavado y styling.</p>
+                    <div class="service-footer">
+                        <div class="service-meta">
+                            <span>50 min</span>
+                            <span class="service-price">RD$ 1,800</span>
+                        </div>
+                        <a href="#" class="btn-service-wa" onclick="openWhatsApp('Hola, me gustaría solicitar una cita para el servicio de Degradado & Diseño.')">Reservar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="service-card fade-in">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800&auto=format&fit=crop" alt="Barba" class="service-img">
+                </div>
+                <div class="service-content">
+                    <span class="service-tag">Barba</span>
+                    <h3>Ritual de Barba</h3>
+                    <p class="service-desc">Perfilado y arreglo de barba con toalla caliente, aceites esenciales y bálsamos hidratantes.</p>
+                    <div class="service-footer">
+                        <div class="service-meta">
+                            <span>35 min</span>
+                            <span class="service-price">RD$ 1,200</span>
+                        </div>
+                        <a href="#" class="btn-service-wa" onclick="openWhatsApp('Hola, me gustaría solicitar una cita para el servicio de Ritual de Barba.')">Reservar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 4 -->
+            <div class="service-card fade-in">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop" alt="Afeitado Clásico" class="service-img">
+                </div>
+                <div class="service-content">
+                    <span class="service-tag">Barba</span>
+                    <h3>Afeitado Clásico</h3>
+                    <p class="service-desc">Afeitado tradicional con navaja, espuma caliente y masaje facial para una piel suave y renovada.</p>
+                    <div class="service-footer">
+                        <div class="service-meta">
+                            <span>40 min</span>
+                            <span class="service-price">RD$ 1,500</span>
+                        </div>
+                        <a href="#" class="btn-service-wa" onclick="openWhatsApp('Hola, me gustaría solicitar una cita para el servicio de Afeitado Clásico.')">Reservar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 5 -->
+            <div class="service-card fade-in">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?q=80&w=800&auto=format&fit=crop" alt="Corte y Barba" class="service-img">
+                </div>
+                <div class="service-content">
+                    <span class="service-tag">Combo</span>
+                    <h3>Corte + Barba</h3>
+                    <p class="service-desc">La experiencia completa. Renueva tu corte y tu barba en una sola sesión con nuestro maestro barbero.</p>
+                    <div class="service-footer">
+                        <div class="service-meta">
+                            <span>75 min</span>
+                            <span class="service-price">RD$ 2,500</span>
+                        </div>
+                        <a href="#" class="btn-service-wa" onclick="openWhatsApp('Hola, me gustaría solicitar una cita para el servicio de Corte + Barba.')">Reservar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 6 -->
+            <div class="service-card fade-in">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1593702288056-4b2a6a8b1c9a?q=80&w=800&auto=format&fit=crop" alt="Diseño de cejas" class="service-img">
+                </div>
+                <div class="service-content">
+                    <span class="service-tag">Facial</span>
+                    <h3>Diseño de Cejas</h3>
+                    <p class="service-desc">Perfilado y diseño de cejas masculino con cera o pinza para realzar tu mirada.</p>
+                    <div class="service-footer">
+                        <div class="service-meta">
+                            <span>15 min</span>
+                            <span class="service-price">RD$ 500</span>
+                        </div>
+                        <a href="#" class="btn-service-wa" onclick="openWhatsApp('Hola, me gustaría solicitar una cita para el servicio de Diseño de Cejas.')">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-subtitle" style="color: var(--gold);">Nuestro Trabajo</span>
+                <h2>Galería de Estilos</h2>
+                <p style="color: #999;">Un vistazo a los resultados que salen de nuestra silla. Precisión en cada detalle.</p>
+            </div>
+            
+            <div class="gallery-grid fade-in">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=800&auto=format&fit=crop" alt="Degradado fade"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800&auto=format&fit=crop" alt="Corte clásico"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800&auto=format&fit=crop" alt="Arreglo de barba"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop" alt="Afeitado navaja"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop" alt="Interior barbería"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?q=80&w=800&auto=format&fit=crop" alt="Estilo de cabello"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="about container">
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <span class="section-subtitle">Nuestra Historia</span>
+                <h2>Más que un corte, un ritual.</h2>
+                <p>En Nexo Studio creemos que la barbería es un arte y un momento para desconectar. Fundada con la visión de rescatar la tradición clásica pero con una estética contemporánea, nos hemos convertido en un referente para el hombre que valora el detalle.</p>
+                
+                <p>Detrás de cada gran corte hay años de dedicación. Nuestro maestro barbero no solo domina las tijeras y la navaja; entiende la arquitectura del rostro y el estilo de vida de cada cliente. No hay prisas, no hay atajos. Solo tú y el arte de la barbería en su máxima expresión.</p>
+                
+                <ul class="about-features">
+                    <li>Atención 100% personalizada y exclusiva</li>
+                    <li>Productos de alta gama para el cuidado masculino</li>
+                    <li>Ambiente privado, elegante y relajado</li>
+                </ul>
+                
+                <a href="#" class="btn-primary" onclick="openWhatsApp('Hola, me gustaría agendar una cita con el maestro barbero.')">Reservar con el maestro</a>
+            </div>
+            <div class="fade-in">
+                <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1000&auto=format&fit=crop" alt="Maestro Barbero" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-subtitle">Opiniones</span>
+                <h2>Lo que dicen nuestros clientes</h2>
+            </div>
+            
+            <div class="grid-testimonials fade-in">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Por fin encontré un lugar donde el detalle importa. El servicio, el espacio y el trato son impecables. No iré a ningún otro lado."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">AM</div>
+                        <div>
+                            <div class="client-name">Andrés Martínez</div>
+                            <div class="client-since">Cliente desde 2022</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"El mejor fade que me han hecho en Santo Domingo. Se toma su tiempo para asesorarte y el resultado siempre es perfecto. 100% recomendado."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">JC</div>
+                        <div>
+                            <div class="client-name">José Carlos</div>
+                            <div class="client-since">Cliente desde 2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Un ambiente de lujo, pero con la calidez de un barrio. El ritual de la toalla caliente para la barba es una experiencia que tienes que probar."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">LR</div>
+                        <div>
+                            <div class="client-name">Luis Rodríguez</div>
+                            <div class="client-since">Cliente desde 2021</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact-section">
+        <div class="contact-info fade-in">
+            <span class="section-subtitle">Contacto & Ubicación</span>
+            <h2>Hablemos.</h2>
+            <p>Estamos aquí para ayudarte a elegir, reservar o resolver cualquier duda que tengas.</p>
+            
+            <ul class="contact-list">
+                <li>
+                    <span>WhatsApp / Reservas</span>
+                    <a href="#" onclick="openWhatsApp('Hola, me gustaría solicitar información.')">+1 (809) 555-0000</a>
+                </li>
+                <li>
+                    <span>Email</span>
+                    <a href="mailto:hola@nexostudio.do">hola@nexostudio.do</a>
+                </li>
+                <li>
+                    <span>Dirección</span>
+                    <a href="https://maps.google.com/?q=Av.+Winston+Churchill+95,+Santo+Domingo" target="_blank">Av. Winston Churchill 95, Santo Domingo</a>
+                </li>
+                <li>
+                    <span>Horarios</span>
+                    <a style="cursor: default;">Lun — Vie: 09:00 — 20:00<br>Sábados: 09:00 — 15:00<br>Domingos: Cerrado</a>
+                </li>
+            </ul>
+            <a href="#" class="btn-primary" onclick="openWhatsApp('Hola, me gustaría solicitar una cita.')">Reservar por WhatsApp</a>
+        </div>
+        <div class="map-container">
+            <a href="https://maps.google.com/?q=Av.+Winston+Churchill+95,+Santo+Domingo" target="_blank" class="map-pin">
+                <div class="logo-circle" style="width: 24px; height: 24px; font-size: 0.8rem;">N</div>
+                Cómo llegar
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nexo Studio. Todos los derechos reservados. | Privacidad | Términos</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // --- CONFIGURACIÓN DE WHATSAPP ---
+        // IMPORTANTE: Reemplaza este número con el tuyo real (código de país + número, SIN el signo +)
+        const WHATSAPP_NUMBER = "18095550000"; 
+
+        function openWhatsApp(message) {
+            const encodedMsg = encodeURIComponent(message);
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMsg}`;
+            window.open(url, '_blank');
+        }
+
+        // --- MENÚ MÓVIL ---
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // --- ANIMACIONES AL HACER SCROLL ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15 // Se activa cuando el 15% del elemento es visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Deja de observar una vez animado
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- EFECTO NAVBAR AL HACER SCROLL ---
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.05)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
