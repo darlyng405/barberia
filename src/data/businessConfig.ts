@@ -11,6 +11,16 @@
  *  - Testimonios verificados de clientes reales
  */
 
+import heroBarbershopStudioImg from '../assets/images/hero_barbershop_studio_1795552060130.jpg';
+import serviceClassicCutImg from '../assets/images/service_classic_cut_1795552062143.jpg';
+import servicePrecisionFadeImg from '../assets/images/service_precision_fade_1795552112087.jpg';
+import serviceBeardRitualImg from '../assets/images/service_beard_ritual_1795552060855.jpg';
+import serviceClassicShaveImg from '../assets/images/service_classic_shave_1795552061562.jpg';
+import serviceCutAndBeardImg from '../assets/images/service_cut_and_beard_1795552062932.jpg';
+import serviceEyebrowGroomingImg from '../assets/images/service_eyebrow_grooming_1795552062229.jpg';
+import masterBarberPortraitImg from '../assets/images/master_barber_portrait_1795552061196.jpg';
+import galleryTexturedCropImg from '../assets/images/gallery_textured_crop_1795552060334.jpg';
+
 export type ServiceCategory = 'Todos' | 'Corte' | 'Barba' | 'Combo' | 'Facial';
 
 export type GalleryCategory =
@@ -94,7 +104,7 @@ export const BUSINESS_CONFIG = {
     headlineAccent: 'Carácter.',
     description:
       'Técnica tradicional y estética contemporánea en una sola silla. Un ritual de barbería sin prisas, atendido directamente por un maestro barbero.',
-    image: '/src/assets/images/hero_barbershop_studio_1795552060130.jpg',
+    image: heroBarbershopStudioImg,
     imageAlt:
       'Interior minimalista de Nexo Studio con sillón clásico de barbería en cuero negro, madera de nogal e iluminación natural',
     whatsappMessage:
@@ -107,7 +117,7 @@ export const BUSINESS_CONFIG = {
   masterBarber: {
     sectionKicker: 'El Maestro Barbero',
     headline: 'Una sola silla. Toda la atención en cada detalle.',
-    image: '/src/assets/images/master_barber_portrait_1795552061196.jpg',
+    image: masterBarberPortraitImg,
     imageAlt:
       'Retrato editorial del maestro barbero de Nexo Studio junto a su sillón clásico de barbería sosteniendo tijeras profesionales',
     paragraphs: [
@@ -166,7 +176,7 @@ export const SERVICES: ServiceItem[] = [
       'Corte tradicional a tijera y máquina adaptado a las facciones y crecimiento natural de tu cabello. Incluye lavado relajante y peinado final.',
     duration: '45 min aprox.',
     price: 'RD$ 1,500',
-    image: '/src/assets/images/service_classic_cut_1795552062143.jpg',
+    image: serviceClassicCutImg,
     alt: 'Maestro barbero realizando un corte clásico masculino con tijera y peine',
     whatsappMessage:
       'Hola, me gustaría solicitar una cita para el servicio de Corte Clásico Signature.',
@@ -180,7 +190,7 @@ export const SERVICES: ServiceItem[] = [
       'Degradado de alta precisión (low, mid o skin fade) con contornos definidos a navaja, texturizado superior y acabado natural.',
     duration: '50 min aprox.',
     price: 'RD$ 1,800',
-    image: '/src/assets/images/service_precision_fade_1795552112087.jpg',
+    image: servicePrecisionFadeImg,
     alt: 'Resultado de corte degradado skin fade de alta precisión con líneas definidas',
     whatsappMessage:
       'Hola, me gustaría solicitar una cita para el servicio de Degradado & Diseño.',
@@ -194,7 +204,7 @@ export const SERVICES: ServiceItem[] = [
       'La experiencia completa de Nexo Studio: corte personalizado más diseño y acondicionamiento de barba con toalla caliente en una sola sesión.',
     duration: '75 min aprox.',
     price: 'RD$ 2,500',
-    image: '/src/assets/images/service_cut_and_beard_1795552062932.jpg',
+    image: serviceCutAndBeardImg,
     alt: 'Resultado integral de corte contemporáneo y barba perfilada con precisión',
     whatsappMessage:
       'Hola, me gustaría solicitar una cita para el servicio de Corte + Barba.',
@@ -208,7 +218,7 @@ export const SERVICES: ServiceItem[] = [
       'Perfilado simétrico, rebaje estructurado, ritual de toalla caliente con aromas botánicos, aceites nutritivos y bálsamo hidratante.',
     duration: '35 min aprox.',
     price: 'RD$ 1,200',
-    image: '/src/assets/images/service_beard_ritual_1795552060855.jpg',
+    image: serviceBeardRitualImg,
     alt: 'Perfilado artesanal de barba con tijeras finas y ritual de toalla caliente',
     whatsappMessage:
       'Hola, me gustaría solicitar una cita para el servicio de Arreglo de Barba.',
@@ -222,7 +232,7 @@ export const SERVICES: ServiceItem[] = [
       'Afeitado tradicional a navaja con espuma caliente batida a brocha, compresas tibias y cierre refrescante con loción calmante.',
     duration: '40 min aprox.',
     price: 'RD$ 1,500',
-    image: '/src/assets/images/service_classic_shave_1795552061562.jpg',
+    image: serviceClassicShaveImg,
     alt: 'Utensilios de afeitado clásico: navaja profesional, brocha con espuma caliente y toalla enrollada',
     whatsappMessage:
       'Hola, me gustaría solicitar una cita para el servicio de Afeitado Clásico.',
@@ -236,7 +246,7 @@ export const SERVICES: ServiceItem[] = [
       'Limpieza y perfilado masculino respetando la densidad natural para equilibrar la expresión sin artificialidad.',
     duration: '15 min aprox.',
     price: 'RD$ 500',
-    image: '/src/assets/images/service_eyebrow_grooming_1795552062229.jpg',
+    image: serviceEyebrowGroomingImg,
     alt: 'Detalle de perfilado masculino de cejas con herramientas de precisión en barbería',
     whatsappMessage:
       'Hola, me gustaría solicitar una cita para el servicio de Diseño de Cejas.',
@@ -259,7 +269,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     relatedService: 'Degradado & Diseño',
     caption:
       'Transición pulida desde cero con perfilado geométrico en sienes y volumen superior natural.',
-    image: '/src/assets/images/service_precision_fade_1795552112087.jpg',
+    image: servicePrecisionFadeImg,
     alt: 'Fotografía editorial de degradado skin fade limpio visto de perfil tres cuartos',
     whatsappMessage:
       'Hola, vi el estilo "Skin Fade & Contorno Limpio" en la galería y me gustaría solicitar una cita para un degradado.',
@@ -272,7 +282,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     relatedService: 'Degradado & Diseño',
     caption:
       'Degradado medio curvo combinado con textura a tijera en la parte superior para un acabado mate contemporáneo.',
-    image: '/src/assets/images/gallery_textured_crop_1795552060334.jpg',
+    image: galleryTexturedCropImg,
     alt: 'Corte mid drop fade con flequillo crop texturizado en iluminación editorial',
     whatsappMessage:
       'Hola, vi el estilo "Mid Drop Fade & Crop Texturizado" en la galería y me gustaría solicitar una cita.',
@@ -284,7 +294,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     relatedService: 'Arreglo de Barba',
     caption:
       'Definición de líneas de mejilla y cuello con tijera de precisión y acondicionamiento con aceites esenciales.',
-    image: '/src/assets/images/service_beard_ritual_1795552060855.jpg',
+    image: serviceBeardRitualImg,
     alt: 'Maestro barbero perfilando una barba completa con tijera y peine',
     whatsappMessage:
       'Hola, vi el trabajo "Esculpido de Barba & Toalla Caliente" en la galería y me gustaría solicitar una cita para arreglo de barba.',
@@ -296,7 +306,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     relatedService: 'Corte Clásico Signature',
     caption:
       'Trabajo minucioso peine sobre tijera con raya lateral elegante y volumen balanceado.',
-    image: '/src/assets/images/service_classic_cut_1795552062143.jpg',
+    image: serviceClassicCutImg,
     alt: 'Ejecución de corte clásico ejecutivo a tijera en sillón de barbería',
     whatsappMessage:
       'Hola, vi el estilo "Corte Clásico a Tijera" en la galería y me gustaría solicitar una cita para un corte clásico.',
@@ -309,7 +319,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     relatedService: 'Corte + Barba',
     caption:
       'Integración progresiva de patillas y barba estructurada junto a un peinado con volumen controlado.',
-    image: '/src/assets/images/service_cut_and_beard_1795552062932.jpg',
+    image: serviceCutAndBeardImg,
     alt: 'Retrato editorial mostrando resultado de corte moderno y barba perfilada',
     whatsappMessage:
       'Hola, vi el estilo "Armonía Corte + Barba" en la galería y me gustaría solicitar una cita para Corte + Barba.',
@@ -321,7 +331,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     relatedService: 'Afeitado Clásico',
     caption:
       'Preparación tradicional con espuma tibia en cuenco cerámico, brocha clásica y toalla de algodón.',
-    image: '/src/assets/images/service_classic_shave_1795552061562.jpg',
+    image: serviceClassicShaveImg,
     alt: 'Navaja clásica, brocha de afeitar con espuma y toalla tibia sobre madera de nogal',
     whatsappMessage:
       'Hola, me interesa el "Ritual de Afeitado a Navaja" que vi en la galería y quisiera solicitar una cita.',
@@ -333,7 +343,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     relatedService: 'Experiencia Nexo Studio',
     caption:
       'Un espacio privado en madera oscura, cuero y detalles en cobre pensado para desconectar del ritmo diario.',
-    image: '/src/assets/images/hero_barbershop_studio_1795552060130.jpg',
+    image: heroBarbershopStudioImg,
     alt: 'Vista interior del estudio privado de Nexo Studio con una sola silla de barbería',
     whatsappMessage:
       'Hola, me gustaría conocer la disponibilidad para agendar una visita en Nexo Studio.',
@@ -346,7 +356,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     relatedService: 'Diseño de Cejas',
     caption:
       'Detalles finales de precisión que enmarcan la mirada manteniendo una estética masculina y natural.',
-    image: '/src/assets/images/service_eyebrow_grooming_1795552062229.jpg',
+    image: serviceEyebrowGroomingImg,
     alt: 'Detalle de herramientas de perfilado y resultado natural en cejas masculinas',
     whatsappMessage:
       'Hola, me gustaría solicitar una cita para el servicio de Diseño de Cejas.',
